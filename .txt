@@ -1,0 +1,16 @@
+window.addEventListener('DOMContentLoaded', addEvents)
+
+function addEvents() {
+
+    const emailInput = document.querySelector('.email-input')
+
+    emailInput.addEventListener('focus', inputFocus)
+ 
+
+    function inputFocus() {
+        emailInput.classList.replace('email-input', 'email-input-on-focus')
+        
+    }
+}
+
+
