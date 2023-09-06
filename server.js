@@ -5,12 +5,17 @@ const app = express()
 const port = 3000
 
 app.set('view engine', 'ejs')
-app.use(express.static(path.join(__dirname, 'public')))
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
 
 app.get('/', (req, res) => {
     res.render('pages/index')
+})
+
+app.get('/forgotPassword', (req, res) => {
+    res.render('pages/forgotPassword')
 })
 
 
